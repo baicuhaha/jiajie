@@ -1,0 +1,107 @@
+<view class='content'>
+    <view class="form">
+       <van-field
+        model:value="{{ storeName }}"
+        placeholder="门店名称"
+        label="门店名称"
+        error-message="{{validation.storeNameErr}}"
+      />
+
+        <van-field
+        model:value="{{ areaCode }}"
+        placeholder="请选择所在区域"
+        label="所在区域"
+        is-link
+        readonly
+        bind:tap="openAreaShow"
+        error-message="{{validation.areaCodeErr}}"
+      />
+      <!-- <van-area area-list="{{ areaList }}" />
+      </van-field>  -->
+
+
+      <van-field
+        model:value="{{ address }}"
+        placeholder="请输入具体地址"
+          label="具体地址"
+        error-message="{{validation.addressErr}}"
+      />
+
+        <van-field
+        model:value="{{ address }}" 
+        placeholder="请输入店铺联系人"
+         label="店铺联系人"
+        error-message="{{validation.addressErr}}"
+      />
+
+          <van-field
+        model:value="{{ password }}"
+        placeholder="请输入密码"
+        label="密码"
+        error-message="{{validation.passwordErr}}"
+      />
+
+          <van-field
+        model:value="{{ confirmPassWord }}"
+        placeholder="请输入确认密码"
+        label="确认密码"
+        error-message="{{validation.confirmPassWordErr}}"
+      />
+
+      <van-field
+        label="法人身份"
+         use-button-slot
+        readonly
+        error-message="{{validation.legalPersonErr}}"
+      >
+      <view slot="button" class="upload-button">  
+           <van-uploader  bind:before-read="beforeRead" class="head-upload" file-list="{{ headFileList }}" bind:after-read="afterHeadRead" />
+           <van-uploader  bind:before-read="beforeRead" class="back-upload" file-list="{{ backFileList }}" bind:after-read="afterRead" />
+      </view>
+      </van-field>
+
+       <van-field
+        label="营业执照"
+         use-button-slot
+        readonly
+        error-message="{{validation.businessErr}}"
+      >
+      <view slot="button" class="business-button">  
+           <van-uploader class="head-upload" file-list="{{ headFileList }}" bind:after-read="afterRead" />
+      </view>
+      </van-field>
+
+     <van-field
+        model:value="{{ phone }}"
+        placeholder="请输入手机号码"
+        label="手机号码"
+        error-message="{{validation.phoneErr}}"
+      />
+
+          <van-field
+          value="{{ sms }}"
+          center
+          clearable
+          label="短信验证码"
+          placeholder="请输入短信验证码"
+          use-button-slot
+          error-message="{{validation.smsErr}}"
+        >
+          <van-button slot="button" size="small" type="primary">
+            发送验证码
+          </van-button>
+        </van-field>
+    </view>
+
+
+
+  <van-button block type="primary" class="confirm-btn">确定</van-button>
+
+
+  <van-popup 
+  position="bottom"
+  custom-style="height: 40%;"
+  show="{{ areaShow }}" >
+    <van-area bind:confirm="areaConfirm"  bind:cancel="onClose" area-list="{{ areaList }}" />
+  </van-popup>
+</view>

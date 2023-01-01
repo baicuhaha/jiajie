@@ -1,0 +1,39 @@
+.top-button {
+  display: flex;
+  flex-direction: row;
+}
+.top-button-item {
+  display: flex;
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  color: #000000;
+  border-radius: 0px;
+}
+.select-color {
+  color: #000000;
+  background-color: #00CCCC;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+.list-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.list-item-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.list-item-content-top {
+  display: flex;
+  flex: 1;
+}

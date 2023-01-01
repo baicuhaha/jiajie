@@ -1,0 +1,47 @@
+<view >
+   <view class="top-button">
+        <button  class="{{selectType == 'all'?'top-button-item select-color':'top-button-item'}}" data-index="all" bindtap="selectBtnType" >
+            <text>全部</text>
+        </button>
+         <button block type="text"   class="{{selectType == 'deliver'?'top-button-item select-color':'top-button-item'}}" data-index="deliver" bindtap="selectBtnType">
+               <text>待发货</text>
+        </button>
+        <button block type="text"  class="{{selectType == 'payment'?'top-button-item select-color':'top-button-item'}}" data-index="payment" bindtap="selectBtnType">
+             <text>待付款</text>
+        </button>
+   </view>
+   <view class="list">
+     <block wx:for="{{list}}" wx:for-item="item" wx:for-index="idx" wx:key="idx">
+       <div class="list-item">
+          <view class="list-top-item">
+               <view>
+                     <text>订单号:</text>
+                     <text>xxxxxxx:</text>
+               </view>
+               <view>
+                     <text>
+                         产品代码/产品名称
+                     </text>
+                     <text>订单状态</text>
+               </view>
+          </view>
+          <view class="list-item-content">
+               <block wx:for="{{parameterList}}" wx:for-item="j"  wx:for-index="jidx" wx:key="jidx">
+                    <view class="list-item-content-top">{{j.label}}</view>
+                </block>
+          </view>
+          <view class="list-item-content">
+               <block wx:for="{{parameterRValue}}"   wx:for-index="jidx" wx:key="jidx">
+                    <view class="list-item-content-top">{{item}}</view>
+           </block>
+          </view>
+          <view class="list-item-content">
+               <block wx:for="{{parameterLValue}}"   wx:for-index="jidx" wx:key="jidx">
+                    <view class="list-item-content-top">{{item}}</view>
+           </block>
+          </view>
+       </div>
+     </block>
+   </view>
+    
+</view>

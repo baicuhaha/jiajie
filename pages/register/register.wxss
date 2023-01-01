@@ -1,0 +1,23 @@
+.head-upload {
+  margin-right: 30px;
+}
+.back-upload {
+  margin-right: 60vw;
+}
+.upload-button {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+.confirm-btn {
+  margin-top: 40px;
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.form  {
+  position: relative;
+}
+.business-button {
+  margin-right: 90vw;
+}

@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/register/register",
+    "pages/index/index",
+    "pages/login/login",
+    "pages/logs/logs",
+    "pages/order/order",
+    "pages/piece/piece",
+    "pages/my/my"
+
+  ],
+  "tabBar":{
+    "color":"#fff",
+    "list":[
+      {
+        "pagePath":"pages/order/order",
+        "text":"我的订单"
+      },
+      {
+        "pagePath":"pages/piece/piece",
+        "text":"定片"
+      },
+      {
+        "pagePath":"pages/my/my",
+        "text":"我的"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#00CCCC",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"white",
+    "backgroundColor":"#00CCCC"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-area": "@vant/weapp/area/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-popup": "@vant/weapp/popup/index"
+  }
+}

@@ -1,0 +1,51 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="form-content">
+      <van-field
+        model:value="{{ code }}"
+        placeholder="请输入客户代码"
+        error-message="{{validation.codeErr}}"
+      />
+
+      <van-field
+        model:value="{{ password}}"
+        placeholder="请输入密码"
+        error-message="{{validation.passwordErr}}"
+      />
+
+      <van-button block class="login" bind:click="btnLoginClick">登录</van-button>   
+      <van-button block class="register"  bind:click="btnRegisterClick">注册门店</van-button>
+      <view class="form-bottom-content">
+          <view class="form-bottom-content-left">
+            <van-checkbox icon-size="20px" value="{{ checked }}" bind:change="onChangeChecked">
+              <text class="form-bottom-content-title">记住密码</text>
+            </van-checkbox>
+          </view>
+          <view class="form-bottom-content-right">
+            <text class="form-bottom-content-title"  bind:click="btnPasswordClick">忘记密码</text>
+          </view>
+      </view>
+
+  </view>
+  <!-- <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <van-button bind:click="btnClick" type="primary">按钮</van-button> -->
+</view>
